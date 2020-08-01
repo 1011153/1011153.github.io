@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      12.4-Sophia Perry
+    </title>
+    <style>
+    html, body {
+      height: 100%
+      width: 100%
+      padding:0;
+      margin:0;
+    }
+
+    body {
+      color: #666666;
+      background-color: #eeeeee;
+      font-family: Helvetica;
+    }
+    h1 {
+      font-family: Georgia;
+      text-align: center;
+      font-size: 50px;
+      color: #03254c;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    h2 {
+      color: #03254c;
+      font-family: verdana;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    p {
+      font-family: Helvetica;
+      color: #03254c;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .menu {
+      background-color: #03254c;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      color: #666666;
+      font-family: verdana;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .link {
+      color: #2a9df4;
+      text-decoration: none;
+    }
+    .link:hover {
+      color: #1167b1;
+    }
+
+    #banner {
+      background-size: cover;
+      background-position: bottom center;
+      height: 200px;
+      width: 100%;
+      line-height: 200px;
+      font-size: 40px;
+      font-size: 5vw;
+    }
+
+    #table {
+      background-color: #2a9df4;
+      text-align: center;
+      color: black;
+      border:5px solid #03254c;
+      margin: 0;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+
+    a.button1{
+     display:inline-block;
+     padding:0.35em 1.2em;
+     border:0.1em solid #FFFFFF;
+     margin:0 0.3em 0.3em 0;
+     border-radius:0.12em;
+     box-sizing: border-box;
+     text-decoration:none;
+     font-family:'Roboto',sans-serif;
+     font-weight:300;
+     color:#FFFFFF;
+     text-align:center;
+     transition: all 0.2s;
+    }
+    a.button1:hover{
+     color:#000000;
+     background-color:#FFFFFF;
+    }
+    @media all and (max-width:30em){
+     a.button1{
+      display:block;
+      margin:0.4em auto;
+     }
+    }
+    #home {display:none}
+    #home:target {display:block}
+    #photos {display:none}
+    #photos:target {display:block}
+    #reasonswhy {display:none}
+    #reasonswhy:target {display:block}
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 20%;
+    max-width: 19%;
+    padding: 4px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+    </style>
+  </head>
+  <body>
+    <script>
+    document.location.hash = "home";
+    </script>
+    <table class="menu">
+      <tr>
+        <th><a href="#home" class="link"><img class="icon" src="data:image/png;base64,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"></img></a>
+        <th><a href="#photos" class="link">Property Insurance 101</a></th>
+        <th><a href="#reasonswhy" class="link">Renter/Condominium</a></th>
+    </tr>
+    </table>
+    <div id="home">
+      <h1 id="banner">
+        All About Property Insurance
+      </h1>
+      <h2>
+        Some of the most misunderstood topics in property insurance are:
+      </h2>
+      <table id="table" width="100%">
+        <tr>
+          <td id="table">Broad coverage homeowner's insurance</td>
+        </tr>
+        <tr>
+          <td id="table">Condominium insurance coverage</td>
+        </tr>
+        <tr>
+          <td id="table">Factors affecting homeowner's insurance costs</td>
+        </tr>
+        <tr>
+          <td id="table">Renter's insurance coverage</td>
+        </tr>
+        <tr>
+          <td id="table">What isn't covered</td>
+        </tr>
+      </table>
+      <h2>
+        There are 2 informational sections of this website: Property Insurance 101 and the Render/Condominium section
+      </h2>
+      <p>
+        Explanations regarding broad coverage homeowner's insurance, factors affecting homeowner's insurance costs, and what property insurance doesn't cover can be found in the "Property Insurance 101" section. Informatin regarding condominium and renter's insurance coverage can be found in the "Renter/Condominium" section.
+      </p>
+
+      <p>
+        All information is from the information section of Module 12 topic 4.
+    </div>
+    <div id="photos">
+      <h1 id="banner">
+        Property Insurance 101
+      </h1>
+      <h2>
+        What are the types of homeowner's insurance?
+      </h2>
+      <p>
+        The types of homeowner's insurance are basic, broad (which covers everything that basic does as well as building collapse and damage done to
+heating, air conditioning, plumbing and sprinkler systems), and special form.
+      </p>
+      <h2>
+        What factors affect homeowner's insurance costs?
+      </h2>
+      <p>
+        Location, condition, type of weather that occurs in your area, construction materials, and size.
+      </p>
+      <h2>
+        What isn't covered by homeowner's and renter's insurance?
+      </h2>
+      <p>
+        Damage caused by flooding and very expensive items (since most insurance policies only cover valubles up to a certain limit).
+      </p>
+    </div>
+
+    <div id="reasonswhy">
+      <h1 id="banner">
+        Renter/Condominium Information
+      </h1>
+      <h2>
+        What does condominium insurance cover?
+      </h2>
+      <p>
+        Damage
+due to smoke, windstorm, hail, fire, lightning, earthquakes, theft, vandalism,
+water escape, as well as personal property coverage and personal liability.
+      </p>
+      <h2>
+        What does renter's insurance cover?
+      </h2>
+      <p>
+        Theft, loss of personal property, and loss of use.
+      </p>
+
+    </div>
+  </body>
+</html>
